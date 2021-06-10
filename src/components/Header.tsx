@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { IoIosArrowForward } from "react-icons/io";
+import { ReactComponent as Chevron } from "../assets/icon-chevron.svg";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,58 +38,151 @@ export default function Header() {
         </button>
         <nav className="hidden md:block md:mt-6 xl:mt-0">
           <ul className="text-white flex space-x-8 font-bold">
-            <li>
-              MERCURY{" "}
-              <span className="md:hidden">
-                <IoIosArrowForward />
-              </span>
-            </li>
-            <li>
-              VENUS{" "}
-              <span className="md:hidden">
-                <IoIosArrowForward />
-              </span>
-            </li>
-            <li>
-              EARTH{" "}
-              <span className="md:hidden">
-                <IoIosArrowForward />
-              </span>
-            </li>
-            <li>
-              MARS{" "}
-              <span className="md:hidden">
-                <IoIosArrowForward />
-              </span>
-            </li>
-            <li>
-              JUPITER{" "}
-              <span className="md:hidden">
-                <IoIosArrowForward />
-              </span>
-            </li>
-            <li>
-              SATURNE{" "}
-              <span className="md:hidden">
-                <IoIosArrowForward />
-              </span>
-            </li>
-            <li>
-              URANUS{" "}
-              <span className="md:hidden">
-                <IoIosArrowForward />
-              </span>
-            </li>
-            <li>
-              NEPTUNE{" "}
-              <span className="md:hidden">
-                <IoIosArrowForward />
-              </span>
-            </li>
+            <Link to="/mercury">
+              <li>MERCURY</li>
+            </Link>
+            <li>VENUS</li>
+            <li>EARTH</li>
+            <li>MARS</li>
+            <li>JUPITER</li>
+            <li>SATURN</li>
+            <li>URANUS</li>
+            <li>NEPTUNE</li>
           </ul>
         </nav>
       </div>
       <hr className="opacity-30" />
+      <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
+        <ul className="text-white flex-col font-bold mt-12 space-y-4 mx-4">
+          <li className="flex items-center justify-between">
+            <div className="flex space-x-4">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="10" fill="#DEF4FC" />
+              </svg>
+              <span>MERCURY</span>
+            </div>
+            <Chevron />
+          </li>
+          <hr className="opacity-10" />
+          <li className="flex items-center justify-between">
+            <div className="flex space-x-4">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="10" fill="#F7CC7F" />
+              </svg>
+              <span>VENUS</span>
+            </div>
+            <Chevron />
+          </li>
+          <hr className="opacity-10" />
+          <li className="flex items-center justify-between">
+            <div className="flex space-x-4">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="10" fill="#545BFE" />
+              </svg>
+              <span>EARTH </span>
+            </div>
+            <Chevron />
+          </li>
+          <hr className="opacity-10" />
+          <li className="flex items-center justify-between">
+            <div className="flex space-x-4">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="10" fill="#FF6A45" />
+              </svg>
+              <span>MARS</span>
+            </div>
+            <Chevron />
+          </li>
+          <hr className="opacity-10" />
+          <li className="flex items-center justify-between">
+            <div className="flex space-x-4">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="10" fill="#ECAD7A" />
+              </svg>
+              <span>JUPITER</span>
+            </div>
+            <Chevron />
+          </li>
+          <hr className="opacity-10" />
+          <li className="flex items-center justify-between">
+            <div className="flex space-x-4">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="10" fill="#FCCB6B" />
+              </svg>
+              <span>SATURNE</span>
+            </div>
+            <Chevron />
+          </li>
+          <hr className="opacity-10" />
+          <li className="flex items-center justify-between">
+            <div className="flex space-x-4">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="10" fill="#65F0D5" />
+              </svg>
+              <span> URANUS</span>
+            </div>
+            <Chevron />
+          </li>
+          <hr className="opacity-10" />
+          <li className="flex items-center justify-between">
+            <div className="flex space-x-4">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="10" fill="#497EFA" />
+              </svg>
+              <span>NEPTUNE</span>
+            </div>
+            <Chevron />
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
