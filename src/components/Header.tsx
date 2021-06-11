@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ReactComponent as Chevron } from "../assets/icon-chevron.svg";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,9 +38,9 @@ export default function Header() {
         </button>
         <nav className="hidden md:block md:mt-6 xl:mt-0">
           <ul className="text-white flex space-x-8 font-bold">
-            {/* <Link to="/mercury"> */}
-              <li>MERCURY</li>
-            {/* </Link> */}
+            <li>
+              <Link to={`/planet`}>MERCURY</Link>
+            </li>
             <li>VENUS</li>
             <li>EARTH</li>
             <li>MARS</li>

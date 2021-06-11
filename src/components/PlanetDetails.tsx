@@ -1,12 +1,26 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import Mercury from "../assets/planet-mercury.svg";
-import MiniPlanet from "../assets/geology-mercury.png";
-import planetInternal from "../assets/planet-mercury-internal.svg";
 
+export default function Planet({
+  name,
+  content,
+  source,
+  structureOverview,
+  structureSource,
+  geologyContent,
+  geologySource,
+  rotation,
+  revolution,
+  radius,
+  temperature,
+  planetImg,
+  internal,
+  geologyImg,
+}) {
 
-export default function Planet({name, content, source}) {
+  console.log(planetImg)
+
   return (
     <div className="text-white mb-8">
       <Tabs>
@@ -17,16 +31,14 @@ export default function Planet({name, content, source}) {
         </TabList>
         <hr className="opacity-25" />
         <TabPanel className="text-center">
-          <img src={Mercury} alt="" className="mx-auto my-28" width="150px" />
+          <img src={planetImg} alt="" className="mx-auto my-28" width="150px" />
           <h2
             className="uppercase text-5xl my-8"
             style={{ fontFamily: "Antonio" }}
           >
             {name}
           </h2>
-          <p className="mx-6">
-            {content}
-          </p>
+          <p className="mx-6">{content}</p>
           <div className="flex justify-center items-center my-10">
             <p>Source: {source}</p>
             <svg
@@ -46,28 +58,28 @@ export default function Planet({name, content, source}) {
             </svg>
           </div>
           <div className="text-xs text-left mx-6 space-y-3">
-            <div className="border p-6 uppercase">
-              <h3>Rotation time</h3>
-              <span></span>
+            <div className="border p-6 uppercase flex justify-between">
+              <h3>Rotation time </h3>
+              <span>{rotation}</span>
             </div>
-            <div className="border p-6 uppercase">
-              <h3>Revolution time</h3>
-              <span></span>
+            <div className="border p-6 uppercase  flex justify-between">
+              <h3>Revolution time </h3>
+              <span>{revolution}</span>
             </div>
-            <div className="border p-6 uppercase">
-              <h3>Radius</h3>
-              <span></span>
+            <div className="border p-6 uppercase  flex justify-between">
+              <h3>Radius </h3>
+              <span>{radius}</span>
             </div>
-            <div className="border p-6 uppercase">
-              <h3>Average temp.</h3>
-              <span></span>
+            <div className="border p-6 uppercase  flex justify-between">
+              <h3>Average temp. </h3>
+              <span>{temperature}</span>
             </div>
           </div>
         </TabPanel>
         <TabPanel className="text-center">
-          <img src={Mercury} alt="" className="mx-auto my-28" width="150px" />
+          <img src={planetImg} alt="" className="mx-auto my-28" width="150px" />
           <img
-            src={MiniPlanet}
+            src={geologyImg}
             alt=""
             className="mx-auto -mt-36"
             width="100px"
@@ -76,16 +88,11 @@ export default function Planet({name, content, source}) {
             className="uppercase text-5xl my-8"
             style={{ fontFamily: "Antonio" }}
           >
-            Mercury
+            {name}
           </h2>
-          <p className="mx-6">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
-            sequi aliquid in nemo ducimus ullam hic placeat, dignissimos
-            suscipit eaque, deleniti dolorum quia. Tempora porro, reiciendis cum
-            assumenda rem excepturi?
-          </p>
+          <p className="mx-6">{structureOverview}</p>
           <div className="flex justify-center items-center my-10">
-            <p>Source:</p>
+            <p>Source: {structureSource}</p>
             <svg
               width="12"
               height="12"
@@ -104,44 +111,34 @@ export default function Planet({name, content, source}) {
           </div>
           <div className="text-xs text-left mx-6 space-y-3">
             <div className="border p-6 uppercase">
-              <h3>Rotation time</h3>
-              <span></span>
+              <h3>Rotation time </h3>
+              <span>{rotation}</span>
             </div>
             <div className="border p-6 uppercase">
-              <h3>Revolution time</h3>
-              <span></span>
+              <h3>Revolution time </h3>
+              <span>{revolution}</span>
             </div>
             <div className="border p-6 uppercase">
-              <h3>Radius</h3>
-              <span></span>
+              <h3>Radius </h3>
+              <span>{radius}</span>
             </div>
             <div className="border p-6 uppercase">
-              <h3>Average temp.</h3>
-              <span></span>
+              <h3>Average temp. </h3>
+              <span>{temperature}</span>
             </div>
           </div>
         </TabPanel>
         <TabPanel className="text-center">
-          <img
-            src={planetInternal}
-            alt=""
-            className="mx-auto my-28"
-            width="150px"
-          />
+          <img src={internal} alt="" className="mx-auto my-28" width="150px" />
           <h2
             className="uppercase text-5xl my-8"
             style={{ fontFamily: "Antonio" }}
           >
-            Mercury
+            {name}
           </h2>
-          <p className="mx-6">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
-            sequi aliquid in nemo ducimus ullam hic placeat, dignissimos
-            suscipit eaque, deleniti dolorum quia. Tempora porro, reiciendis cum
-            assumenda rem excepturi?
-          </p>
+          <p className="mx-6">{geologyContent}</p>
           <div className="flex justify-center items-center my-10">
-            <p>Source:</p>
+            <p>Source: {geologySource}</p>
             <svg
               width="12"
               height="12"
@@ -160,20 +157,20 @@ export default function Planet({name, content, source}) {
           </div>
           <div className="text-xs text-left mx-6 space-y-3">
             <div className="border p-6 uppercase">
-              <h3>Rotation time</h3>
-              <span></span>
+              <h3>Rotation time </h3>
+              <span>{rotation}</span>
             </div>
             <div className="border p-6 uppercase">
-              <h3>Revolution time</h3>
-              <span></span>
+              <h3>Revolution time </h3>
+              <span>{revolution}</span>
             </div>
             <div className="border p-6 uppercase">
-              <h3>Radius</h3>
-              <span></span>
+              <h3>Radius </h3>
+              <span>{radius}</span>
             </div>
             <div className="border p-6 uppercase">
-              <h3>Average temp.</h3>
-              <span></span>
+              <h3>Average temp. </h3>
+              <span>{temperature}</span>
             </div>
           </div>
         </TabPanel>
