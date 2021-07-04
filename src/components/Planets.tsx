@@ -21,9 +21,6 @@ export default function Planets() {
           revolution={detail.revolution}
           radius={detail.radius}
           temperature={detail.temperature}
-          planetImg={detail.images.planet}
-          internal={detail.images.internal}
-          geologyImg={detail.images.geology}
         />
       ))}
     </div>

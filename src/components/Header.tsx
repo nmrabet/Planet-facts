@@ -37,9 +37,9 @@ export default function Header() {
           </svg>
         </button>
         <nav className="hidden md:block md:mt-6 xl:mt-0">
-          <ul className="text-white flex space-x-8 font-bold">
+          <ul className="text-white flex space-x-6 font-bold">
             <li>
-              <Link to={`/planet`}>MERCURY</Link>
+              <Link to={`/mercury`}>MERCURY</Link>
             </li>
             <li>VENUS</li>
             <li>EARTH</li>

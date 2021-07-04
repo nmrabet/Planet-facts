@@ -1,21 +1,23 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import mercImg from "../assets/planet-mercury.svg";
+import mercInternal from "../assets/planet-mercury-internal.svg";
+import geologyImg from "../assets/geology-mercury.png";
 
-export default function Planet({
-  name,
-  content,
-  source,
-  structureOverview,
-  structureSource,
-  geologyContent,
-  geologySource,
-  rotation,
-  revolution,
-  radius,
-  temperature
-}) {
-
+export default function Mercury({
+    name,
+    content,
+    source,
+    structureOverview,
+    structureSource,
+    geologyContent,
+    geologySource,
+    rotation,
+    revolution,
+    radius,
+    temperature
+  }) {
   return (
     <div className="text-white mb-8">
       <Tabs>
@@ -26,6 +28,7 @@ export default function Planet({
         </TabList>
         <hr className="opacity-25" />
         <TabPanel className="text-center">
+          <img src={mercImg} alt="" className="mx-auto my-28" width="150px" />
           <h2
             className="uppercase text-5xl my-8"
             style={{ fontFamily: "Antonio" }}
@@ -71,6 +74,13 @@ export default function Planet({
           </div>
         </TabPanel>
         <TabPanel className="text-center">
+          <img src={mercInternal} alt="" className="mx-auto my-28" width="150px" />
+          <img
+            src={geologyImg}
+            alt=""
+            className="mx-auto -mt-36"
+            width="100px"
+          />
           <h2
             className="uppercase text-5xl my-8"
             style={{ fontFamily: "Antonio" }}
@@ -116,6 +126,7 @@ export default function Planet({
           </div>
         </TabPanel>
         <TabPanel className="text-center">
+          <img src={mercInternal} alt="" className="mx-auto my-28" width="150px" />
           <h2
             className="uppercase text-5xl my-8"
             style={{ fontFamily: "Antonio" }}
